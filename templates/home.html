@@ -10,15 +10,18 @@
         height: 360px;
         width: 100%;
         object-fit: cover;
+        margin-bottom:16px;
       }
     </style>
   </head>
   <body>
+    {% include 'nav.html'%}
+    <img class="img-fluid "" id="banner" src="https://carreers-website--avinashvikramsi.repl.co/static/banner.jpg" >
     <div class="container">
       <h1 class="text-center mt-2 mb-4">Jovian Careers</h1>
-      <img class="img-fluid" id="banner" src="https://carreers-website--avinashvikramsi.repl.co/static/banner.jpg" >
-      <h2 class="text-center mt-2 mb-4">About Jovian</h2>
-      <p class="lead">Lorem ipsum dolor sit amet, consectetur
+      <div class="row">
+        <div class="col-md-6">
+        <p class="lead">Lorem ipsum dolor sit amet, consectetur
       adipiscing elit, sed do eiusmod tempor incididunt ut
       labore et dolore magna aliqua. Ut enim ad minim
       veniam, quis nostrud exercitation ullamco laboris
@@ -27,6 +30,13 @@
       cillum dolore eu fugiat nulla pariatur. Excepteur
       sint occaecat cupidatat non proident, sunt in culpa
       qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+
+        <div class="d-none d-md-block col-md-6">
+          <img src="/static/people.jpg" style="height:320px;border-radius:4px;">"
+        </div>
+      </div>
+      
       
       <h2 class="text-center mt-2 mb-4">Open Job Positions</h2>
 
@@ -36,9 +46,10 @@
         {% endfor %}
       </div>
       <div class="text-center">
-        <button class="btn btn-primary btn-lg">Contact Us</button>
-        <p class="mt-4">Copyright 2023, Jovian</p>
+        <a href="mailto:hello@jovian.ai?subject=Contacts&body=My%20name%20%5Byour%20name%20here%5D%0D%0A%5Bprovide%20the%20reason%20for%20contacts%5D " class="btn btn-primary btn-lg">Contact Us</a>
       </div>
     </div>
+    {% include 'footer.html'%}
+  </body>
   </body>
 </html>
