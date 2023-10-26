@@ -23,6 +23,7 @@ def load_jobs_from_db():
     cursor.execute("SELECT * FROM jobs")
     for row in cursor.fetchall():
       jobs.append(row)
-  finally:
-    connection.close()
+  except Exception as e:
+        print("An error occurred while loading jobs from the database:", e)
+  connection.close()
   return jobs
