@@ -27,3 +27,18 @@ def load_jobs_from_db():
         print("An error occurred while loading jobs from the database:", e)
     
   return jobs
+
+def load_job_from_db(id):
+  try:
+    cursor = connection.cursor()
+    cursor.execute("SELECT * FROM jobs WHERE id= %s", id)
+
+    rows=cursor.fetchall()
+    if len(rows) > 0:
+      return rows[0]
+    else:
+      return None
+  
+  except Exception as e:
+        print("An error occurred while loading jobs from the database:", e)
+

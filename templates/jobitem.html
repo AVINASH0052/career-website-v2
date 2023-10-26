@@ -6,18 +6,12 @@
     </div>
     {% if 'salary' in job %}
       <div>
-        <script>
-          let s1={{job['salary']}};
-          let s2= {{job['currency']}};
-          let s3=s2.concat(s1) ;
-        </script>
-        
-        <b>Salary:</b> {{job['salary']}}
+        <b>Salary:</b>{{job['currency']}}{{job['salary']}}
       </div>
     {% endif %}
   </div>
 
   <div class="col-1">
-    <button type="button" class="btn btn-outline-primary">Apply</button>
+    <a href="/job/{{job['id']}}" type="button" class="btn btn-outline-primary">Apply</a>
   </div>
 </div>
