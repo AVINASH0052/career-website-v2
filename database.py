@@ -25,5 +25,5 @@ def load_jobs_from_db():
       jobs.append(row)
   except Exception as e:
         print("An error occurred while loading jobs from the database:", e)
-  connection.close()
+    
   return jobs
