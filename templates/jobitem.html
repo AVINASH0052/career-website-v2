@@ -6,6 +6,12 @@
     </div>
     {% if 'salary' in job %}
       <div>
+        <script>
+          let s1={{job['salary']}};
+          let s2= {{job['currency']}};
+          let s3=s2.concat(s1) ;
+        </script>
+        
         <b>Salary:</b> {{job['salary']}}
       </div>
     {% endif %}
